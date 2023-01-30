@@ -10,6 +10,10 @@
 --> db.name.drop() = Delete current database of particular collection
 --> db.dropDatabase() = Delete current database
 
-
+# CRUD in database using command line
+--> insert data in collection = db.products.insertone({name:"m40", brand : "samsung", .....})
+--> check data into collection = db.products.find()
+--> update collection = db.products.upateOne({name:"u10", {$set :{brand :"oppo"}}) : where name="u10" set brand= oppo
+--> delete from collection = db.products.deleteOne({"brand" : "apple"})
 
 
