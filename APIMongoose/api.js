@@ -29,4 +29,18 @@ app.put('/update/:_id',async(req,res)=>{
     res.send(data);
 })
 
+// search
+
+app.get('/search/:item',async(req,resp)=>{
+    const data =await productModel.find({
+        "$or" : [
+            {"name": {$regex : req.params.item}},
+            {"brand": {$regex : req.params.item}},
+            
+        ]
+    });
+    resp.send(data)
+})
+
+
 app.listen(5000)
